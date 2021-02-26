@@ -1,6 +1,7 @@
 <template>
   <form action="">
-    <h3 class="section-subtitle">Inscrivez-vous</h3>
+    <button @click="$emit('unclicked')">Retour</button>
+    <h3 class="section-subtitle">Testez Aluni'son en avant-première</h3>
     <BasicInput v-model="lastname" label="Nom" type="text" />
     <BasicInput v-model="firstname" label="Prénom" type="text" />
     <BasicInput v-model="email" label="Email" type="email" />
@@ -31,29 +32,31 @@ export default {
       firstname: '',
       email: '',
       textConsent: '',
+      checked: false,
     }
   },
   created() {
     this.textConsent = consent.textConsent
   },
+  emits: ['clicked'],
 }
 </script>
 <style lang="scss" scoped>
 form {
   width: 40%;
   text-align: center;
-  margin-top: 3rem;
-  margin-right: 10rem;
-  margin-left: 30rem;
-  padding: 2rem;
+  margin-top: 3%;
+  margin-right: 10%;
+  margin-left: 25%;
+  padding: 2%;
   border-radius: 10px;
-  background-color: transparentize($color: #000000, $amount: 0.8);
+  background-color: transparentize($color: #000000, $amount: 0.9);
 
   .form-control {
     display: flex;
     flex: row nowrap;
     align-items: center;
-    margin-left: 15rem;
+    margin-left: 30%;
     .button {
       color: #fff;
       font-weight: bold;
@@ -66,6 +69,14 @@ form {
       background-color: #ffc254;
       border-color: #ffc254;
     }
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 812px) {
+  form {
+    margin: 0;
+    width: 100%;
+    height: 30%;
   }
 }
 </style>

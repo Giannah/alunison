@@ -28,6 +28,9 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
 }
+body {
+  margin: 0;
+}
 h1,
 h2,
 h3,
@@ -40,7 +43,8 @@ section {
   margin: 2rem;
 }
 h1 {
-  color: #025f5f;
+  color: #ffbb00;
+  text-transform: uppercase;
   font-size: 2.5rem;
 }
 .section-title {
@@ -50,7 +54,7 @@ h1 {
 .section-subtitle {
   color: #00bbbb;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -61,5 +65,15 @@ h1 {
 }
 #content {
   margin-top: 6rem;
+}
+
+@media screen and (min-width: 200px) and (max-width: 812px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.1%;
+  }
 }
 </style>

@@ -12,6 +12,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   top: 0;
+  padding: 0.7%;
   position: fixed;
   width: 100%;
   background-color: white;

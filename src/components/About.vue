@@ -19,13 +19,14 @@
 </template>
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   name: 'About',
   data() {
     return {
-      myIcon: faArrowCircleDown,
+      myIcon: faChevronCircleDown,
+      show: false,
     }
   },
   components: {
@@ -37,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 section {
   height: 100vh;
+  width: 100vw;
   .section-content {
     text-align: left;
     width: 100%;
@@ -48,17 +50,14 @@ section {
     margin-bottom: 1rem;
     .flex-item {
       max-width: 40%;
-      margin: 3rem;
+      margin: 2%;
     }
   }
   .section-end {
     margin-top: 12%;
     .icon {
-      font-size: 3rem;
+      font-size: 4rem;
       color: #00bbbb;
-    }
-    .icon:hover {
-      transform: scale(2);
     }
   }
 }
